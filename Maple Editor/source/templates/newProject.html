@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/static/styles.css">
+    <title>Create New Project - Maple Editor</title>
+</head>
+<body>
+    <div class="page-title">
+        <div class="title">Create New Project</div>
+        <div class="subtitle">Set up your new project</div>
+    </div>
+    <hr>
+    <div class="new-project-form">
+        <form action="/project/new" method="post">
+            <label for="project-name">Project Name:</label><br>
+            <input type="text" id="project-name" name="name" required><br><br>
+
+            <label for="project-location">Project Location:</label><br>
+            <input type="text" id="project-location" name="path" value="{{ path }}" required><br><br>
+            
+            <label for="project-type">Project Type:</label><br>
+            <select id="project-type" name="type">
+                <option value="2d_game">2D Game</option>
+                <option value="3d_game">3D Game</option>
+                <option value="application">Application</option>
+            </select><br><br>
+            <input type="submit" value="new">
+        </form>
+    </div>
+</body>
+</html>

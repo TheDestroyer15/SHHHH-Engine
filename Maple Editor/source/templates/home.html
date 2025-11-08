@@ -1,8 +1,29 @@
 <!DOCTYPE html>
 <html>
-<head></head>
+<head>
+    <link rel="stylesheet" type="text/css" href="/static/styles.css">
+    <title>Maple Editor Home</title>
+</head>
 <body>
-    <h1>Welcome to Maple Editor</h1>
-    <p>This is the home page of the Maple Editor application.</p>
+    <div class="page-title">
+        <div class="title">Welcome to Maple Editor</div>
+        <div class="subtitle">Select a Project</div>
+    </div>
+    <hr>
+    {% if projects|length == 0 %}
+        <div class="no-projects">
+            No projects found. Click below to create a new project. Or open a new folder from the menu.
+        </div>
+    {% endif %}
+    <div class="project-list">
+        {% for project in projects %}
+            <div class="project-item">
+                <a href="/project/{{ project.id }}">{{ project.name }}</a>
+            </div>
+        {% endfor %}
+        <div class="project-item">
+            <a href="/project/new">+ Create New Project</a>
+        </div>
+    </div>
 </body>
 </html>

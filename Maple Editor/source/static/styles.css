@@ -1,0 +1,77 @@
+html {
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 0;
+    color: var(--text-color);
+
+    --background-color: #202070;
+    --text-color: #707070;
+    --link-color: #1a73e8;
+    --border-color: #cccccc;
+
+    --input-background-color: #507050;
+}
+
+a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+.page-title {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.title {
+    text-align: center;
+    color: var(--text-color);
+    font-size: 36px;
+    margin: 0;
+}
+.subtitle {
+    text-align: center;
+    color: var(--text-color);
+    font-size: 18px;
+    margin: 0;
+    margin-top: 5px;
+}
+
+.project-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.project-item {
+    border: 1px solid var(--border-color);
+    border-radius: 0px;
+    padding: 10 px;  
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+input[type="text"] {
+    padding: 4px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid var(--border-color);
+    border-radius: 0px;
+    background-color: var(--input-background-color);
+}
+
+input[type="submit"] {
+    background-color: var(--link-color);
+    color: white;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 0px;
+}
